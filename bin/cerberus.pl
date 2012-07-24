@@ -44,7 +44,8 @@ unless (caller) {
 }
 return $app;
 
-# ABSTRACT: Run the Cerberus server
+# ABSTRACT: Run App::Cerberus as a server
+# PODNAME:  cerberus.pl
 
 =head1 USAGE
 
