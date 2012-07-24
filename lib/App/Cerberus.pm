@@ -113,7 +113,7 @@ For instance:
     }
 
 
-=head2 L<App::Cerbrerus::Plugin::TimeZone>
+=head2 L<App::Cerberus::Plugin::TimeZone>
 
 Uses L<Time::OlsonTZ::Data> to provide the current timezone for the user, and
 it's offset from GMT.
@@ -127,8 +127,8 @@ For instance:
         "gmt_offset": "-14400"
     }
 
-The L<GeoIP|/App::Cerberus::Plugin::GeoIP> plugin must be run before the
-L<TimeZone|/App::Cerberus::Plugin::TimeZone> plugin.
+The L<GeoIP|App::Cerberus::Plugin::GeoIP> plugin must be run before the
+L<TimeZone|App::Cerberus::Plugin::TimeZone> plugin.
 
 =head2 L<App::Cerberus::Plugin::BrowserDetect>
 
@@ -239,6 +239,16 @@ See each L<plugin|PLUGINS> for details of the accepted parameters.
 
 
 See L<cerberus.pl> for more options.
+
+=head1 SEE ALSO
+
+=over
+
+=item L<App::Cerberus::Client>
+
+=item L<Dancer::Plugin::Cerberus>
+
+=back
 
 =head1 SUPPORT
 
