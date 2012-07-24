@@ -95,7 +95,12 @@ and install it as follows:
     cd Geo-IP-*
 
     perl Makefile.PL LIBS='-L/opt/geoip/lib64' INC='-I/opt/geoip/include'
-    make && make test && make install
+    # make && make test && make install
+    make && make install
+
+I<B<Note:> If you're installing GeoIP in a non-standard location (as above),
+then testing the Perl API won't work, because the path to the data file is
+hard coded. See L<https://rt.cpan.org/Public/Bug/Display.html?id=49531>.>
 
 You will also need a copy of the GeoLite City database:
 
