@@ -6,7 +6,7 @@ use JSON();
 use Carp;
 use Plack::Request;
 
-our $json = JSON->new->utf8->pretty;
+our $json = JSON->new->utf8;
 
 #===================================
 sub new {

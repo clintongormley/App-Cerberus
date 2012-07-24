@@ -178,7 +178,6 @@ sub request {
     else {
         $self->{store}->incr( map { $keys{$_} => $Expire{$_} } keys %keys );
     }
-    $response->{backend} = { %{ $self->{store} } };
 }
 
 #===================================
