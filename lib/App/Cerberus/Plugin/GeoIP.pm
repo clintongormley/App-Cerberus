@@ -10,11 +10,10 @@ use parent 'App::Cerberus::Plugin';
 sub init {
 #===================================
     my $self = shift;
-    my $data_file = shift
+    $self->{data} = shift
         or croak "No data file configured. \n"
         . "You can download it from: "
         . 'http://www.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz';
-    $self->{geo} = Geo::IP->open($data_file);
 }
 
 #===================================
@@ -22,8 +21,10 @@ sub request {
 #===================================
     my ( $self, $req, $response ) = @_;
     my $ip = $req->param('ip') or return;
+    my $geo = $self->{geo} ||= Geo::IP->open( $self->{data} );
+
     my %data;
-    if ( my $record = $self->{geo}->record_by_addr($ip) ) {
+    if ( my $record = $geo->record_by_addr($ip) ) {
         %data = map { $_ => $record->$_ } qw(
             country_code country_name region region_name city
             postal_code latitude longitude area_code time_zone
