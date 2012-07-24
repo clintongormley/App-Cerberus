@@ -1,3 +1,6 @@
+0.03    2012-07-24
+        Removed some debugging
+
 0.02    2012-07-24
         Corrected the install docs for GeoIP plugin
         cerberus.pl wasn't being installed
