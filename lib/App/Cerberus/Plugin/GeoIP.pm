@@ -81,11 +81,9 @@ You can do this as follows: (I'm assuming you have write permissions on C</opt>)
     tar -xzf GeoIP.tar.gz
     cd GeoIP-*/
 
-    libtoolize --f
+    libtoolize -f
     ./configure --prefix=/opt/geoip
-    make
-    make check
-    make install
+    make && make check && make install
 
 Then, find the latest version of L<Geo::IP> from L<https://metacpan.org/release/Geo-IP>
 and install it as follows:
@@ -96,9 +94,7 @@ and install it as follows:
     cd Geo-IP-*
 
     perl Makefile.PL LIBS='-L/opt/geoip/lib64' INC='-I/opt/geoip/include'
-    make
-    make test
-    make install
+    make && make test && make install
 
 You will also need a copy of the GeoLite City database:
 
