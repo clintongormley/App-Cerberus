@@ -1,2 +1,6 @@
+0.02    2012-07-24
+        Corrected the install docs for GeoIP plugin
+        cerberus.pl wasn't being installed
+
 0.01    2012-07-23
         First release
