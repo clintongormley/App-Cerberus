@@ -1,3 +1,6 @@
+0.07    2012-07-28
+        Moved App::Cerberus::Client into its own distro
+
 0.06    2012-07-24
         Add App::Cerberus::Client
 
