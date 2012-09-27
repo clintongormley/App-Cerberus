@@ -166,9 +166,10 @@ Different limits can be applied to different IP ranges.
 For instance:
 
     "throttle": {
-        "range": "google",
-        "sleep": 10,
-        "reason": "second"
+        "range":         "google",
+        "reason":        "second",
+        "sleep":         10,
+        "request_count": 12
     }
 
 =head1 INSTALLING CERBERUS
