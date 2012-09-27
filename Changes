@@ -1,3 +1,6 @@
+0.09    2012-09-27
+        Include the request_count per $limit in the Throttle info
+
 0.08    2012-08-06
         Renamed Changes.txt to Changes
 
