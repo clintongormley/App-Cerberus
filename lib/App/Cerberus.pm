@@ -40,7 +40,9 @@ sub request {
 
     my $response = {};
     for my $plugin ( @{ $self->{plugins} } ) {
-        $plugin->request( $req, $response );
+	eval {
+            $plugin->request( $req, $response );
+	};
     }
     return [
         200,
