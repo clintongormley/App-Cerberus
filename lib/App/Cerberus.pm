@@ -24,7 +24,7 @@ sub new {
         eval "require $module"
             or die "Can't load plugin ($module): $@";
 
-        my $plugin = eval { $module->new( $args ) }
+        my $plugin = eval { $module->new($args) }
             or croak "Error loading plugin ($name): $@";
 
         push @plugins, $plugin;
@@ -40,7 +40,13 @@ sub request {
 
     my $response = {};
     for my $plugin ( @{ $self->{plugins} } ) {
-        $plugin->request( $req, $response );
+        eval {
+            $plugin->request( $req, $response );
+            1;
+        }
+            or warn "Error running plugin ("
+            . ref($plugin) . "): "
+            . ( $@ || 'Unknown error' );
     }
     return [
         200,
