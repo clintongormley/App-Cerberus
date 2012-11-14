@@ -1,3 +1,8 @@
+0.10    2012-11-14
+        Errors in the plugins no longer cause App::Cerberus to die.
+        Minor typos in the the BrowserDetect plugin fixed
+        Thanks to @gittex for both patches
+
 0.09    2012-09-27
         Include the request_count per $limit in the Throttle info
 
