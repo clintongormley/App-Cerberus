@@ -145,14 +145,15 @@ For instance:
 
     "ua": {
         "is_robot": 0,
-        "is_mobile": 1,
+        "is_mobile": 0,
+        "is_tablet": 1,
         "version": {
             "minor": ".1",
             "full": 5.1,
             "major": "5"
         },
         "browser": "safari",
-        "device": "iphone",
+        "device": "ipad",
         "browser_properties": [
             "ios",
             "iphone",
