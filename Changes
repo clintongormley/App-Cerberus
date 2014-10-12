@@ -1,3 +1,6 @@
+0.11    2014-09-12
+        Add is_tablet to BrowserDetect response
+
 0.10    2012-11-14
         Errors in the plugins no longer cause App::Cerberus to die.
         Minor typos in the the BrowserDetect plugin fixed

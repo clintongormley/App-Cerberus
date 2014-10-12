@@ -29,6 +29,7 @@ sub request {
         device    => $detect->device    || '',
         os        => $detect->os_string || '',
         is_mobile => $detect->mobile    || 0,
+        is_tablet => $detect->tablet    || 0,
         version   => {
             major => $detect->public_major   || '',
             minor => $detect->public_minor   || '',
@@ -57,14 +58,15 @@ to Cerberus. For instance:
 
     "ua": {
         "is_robot": 0,
-        "is_mobile": 1,
+        "is_mobile": 0,
+        "is_tablet": 1,
         "version": {
             "minor": ".1",
             "full": 5.1,
             "major": "5"
         },
         "browser": "safari",
-        "device": "iphone",
+        "device": "ipad",
         "browser_properties": [
             "ios",
             "iphone",
